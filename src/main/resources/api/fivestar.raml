@@ -1,0 +1,36 @@
+#%RAML 1.0
+title: fivestar
+baseUri: http://fivestar/api
+/fivestar:
+  get:
+    description: retrive the data from target systems
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "name": "fivestar",
+                "address": "hyderabad",
+                "cost": "10",
+                "number": "5"
+              }
+  post:
+    description: create data in target systems
+    body:
+      application/json:
+        example:
+          {
+            "name": "dairymilk",
+            "address": "banglore",
+            "cost": "90",
+            "number": "0"
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "response": "data created succesfully"
+              }
